@@ -1,5 +1,5 @@
-#ifndef SRC_TESTS_SUITCASES_H_
-#define SRC_TESTS_SUITCASES_H_
+#ifndef SRC_TESTS_TESTS_SUITCASES_H_
+#define SRC_TESTS_TESTS_SUITCASES_H_
 
 #define S21_TRUE 1
 #define S21_FALSE 0
@@ -16,9 +16,9 @@
 #define MAX_DECIMAL 79228162514264337593543950335.0F
 #define MIN_DECIMAL -79228162514264337593543950335.0F
 
-
 #include <check.h>
-#include "s21_decimal.h"
+
+#include "../funcs/s21_decimal.h"
 
 Suite *suite_add(void);
 Suite *suite_sub(void);
@@ -42,4 +42,4 @@ Suite *suite_round(void);
 void run_tests(void);
 void run_testcase(Suite *testcase);
 
-#endif  // SRC_TESTS_SUITCASES_H_
+#endif  // SRC_TESTS_TESTS_SUITCASES_H_

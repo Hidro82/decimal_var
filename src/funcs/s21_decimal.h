@@ -1,5 +1,5 @@
-#ifndef SRC_S21_DECIMAL_H_
-#define SRC_S21_DECIMAL_H_
+#ifndef SRC_FUNCS_S21_DECIMAL_H_
+#define SRC_FUNCS_S21_DECIMAL_H_
 
 #include <limits.h>
 #include <math.h>
@@ -12,7 +12,6 @@
 #define NUM_255 255
 #define TRUE 1
 #define FALSE 0
-#define BIT_SIZE 4
 
 #define S21_MAX_UINT 4294967295
 #define is_fin(x) __builtin_isfinite(x)
@@ -81,17 +80,6 @@ void add_div_10(int *result_arr, int *exp_1, int *count_bit);
 int add_less_1010(int *arr_help, int *arr_10);
 int add_main(s21_decimal value_1, int exp_1, s21_decimal value_2, int exp_2,
              s21_decimal *result);
-int mul_main(s21_decimal value_1, int exp_1, s21_decimal value_2, int exp_2,
-             s21_decimal *result);
-void copy_zero(int *help_arr);
-void copy_value(int *help_arr, int *value);
-int div_main(s21_decimal value_1, int exp_1, s21_decimal value_2, int exp_2,
-             s21_decimal *result);
-int div_less_number(int *arr_help, int *value_2_arr_help, int count_bit_2);
-int div_less_val(int *value_1_arr, int *value_2_arr);
-int div_mul_1010(int *result_arr, int exp_1);
-int mod_main(s21_decimal value_1, int exp_1, s21_decimal value_2, int exp_2,
-             s21_decimal *result);
 
 // Arithmetic Operators
 int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
@@ -120,4 +108,4 @@ int s21_truncate(s21_decimal value, s21_decimal *result);
 int s21_floor(s21_decimal value, s21_decimal *result);
 int s21_round(s21_decimal value, s21_decimal *result);
 
-#endif  // SRC_S21_DECIMAL_H_
+#endif  // SRC_FUNCS_S21_DECIMAL_H_

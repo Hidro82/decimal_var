@@ -386,7 +386,8 @@ START_TEST(add_test_25) {
 END_TEST
 
 START_TEST(add_test_26) {
-  s21_decimal dec1 = {{U_MAX_INT, U_MAX_INT, U_MAX_INT, 0}};
+  int tmp1 = 4294967295;
+  s21_decimal dec1 = {{tmp1, tmp1, tmp1, 0}};
   s21_decimal dec2 = {{1, 0, 0, 0}};
   s21_decimal res1;
   int ret_s21 = s21_add(dec1, dec2, &res1);
@@ -395,8 +396,9 @@ START_TEST(add_test_26) {
 END_TEST
 
 START_TEST(add_test_27) {
+  int tmp1 = 4294967295;
   float tmp2 = pow(2, 31);
-  s21_decimal dec1 = {{U_MAX_INT, U_MAX_INT, U_MAX_INT, tmp2}};
+  s21_decimal dec1 = {{tmp1, tmp1, tmp1, tmp2}};
   s21_decimal dec2 = {{1, 0, 0, tmp2}};
   s21_decimal res1;
   int ret_s21 = s21_add(dec1, dec2, &res1);
